@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix خاتمة — Khatmah",
+  "description": "رفيقك في ختم القرآن الكريم — قراءة واستماع وختمات ومتابعة الورد اليومي",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

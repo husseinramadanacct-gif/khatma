@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-quran: 'Amiri Quran', 'Amiri', serif;
+    --font-ui: 'Cairo', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-ui);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.dark body {
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+  }
+
+  /* نمط الوضع الورقي المريح (Sepia Mode) */
+  html.sepia body {
+    background-color: #f7f2e7;
+    color: #3b3026;
+  }
+
+  html.sepia .bg-white {
+    background-color: #fcf8f0 !important;
+    border-color: #ebdccb !important;
+  }
+
+  html.sepia .bg-neutral-50 {
+    background-color: #f7f2e7 !important;
+  }
+
+  html.sepia .bg-neutral-100 {
+    background-color: #ede2d1 !important;
+  }
+
+  html.sepia .border-neutral-200 {
+    border-color: #e5d7c3 !important;
+  }
+}
+
+/* خط المصحف الشريف العثماني */
+.font-quran {
+  font-family: 'Amiri Quran', 'Amiri', serif;
+  font-feature-settings: "cv01", "cv02", "cv03", "calt", "liga";
+}
+
+.font-serif {
+  font-family: 'Amiri', serif;
+}
+
+.font-sans {
+  font-family: 'Cairo', system-ui, sans-serif;
+}
+
+/* قواعد وألوان أحكام التجويد المعتمدة في المصحف المجود الملون */
+.tajweed-char {
+  display: inline;
+  transition: color 0.15s ease;
+}
+
+/* 1. همزة الوصل واللام الشمسية والحروف الساقطة في درج الكلام (رمادي) */
+.tajweed-hamza-wasl,
+.tajweed-silent,
+.tajweed-lam-shamsiyah {
+  color: #94a3b8;
+  opacity: 0.75;
+}
+.dark .tajweed-hamza-wasl,
+.dark .tajweed-silent,
+.dark .tajweed-lam-shamsiyah {
+  color: #64748b;
+  opacity: 0.7;
+}
+
+/* 2. المدود (درجات الأحمر والبرتقالي والأزرق) */
+.tajweed-madd-necessary {
+  color: #b91c1c; /* أحمر قاني داكن - مد لازم 6 حركات */
+  font-weight: 600;
+}
+.dark .tajweed-madd-necessary {
+  color: #f87171;
+}
+
+.tajweed-madd-obligatory {
+  color: #dc2626; /* أحمر - مد واجب متصل 4-5 حركات */
+  font-weight: 500;
+}
+.dark .tajweed-madd-obligatory {
+  color: #fb7185;
+}
+
+.tajweed-madd-permissible {
+  color: #ea580c; /* برتقالي داكن - مد جائز 2، 4، 6 حركات */
+}
+.dark .tajweed-madd-permissible {
+  color: #fb923c;
+}
+
+.tajweed-madd-normal {
+  color: #2563eb; /* أزرق صريح - مد أصلي حركتان */
+}
+.dark .tajweed-madd-normal {
+  color: #60a5fa;
+}
+
+/* 3. القلقلة (أزرق سماوي - قطب جد) */
+.tajweed-qalaqah {
+  color: #0284c7;
+  font-weight: 600;
+}
+.dark .tajweed-qalaqah {
+  color: #38bdf8;
+}
+
+/* 4. الغنة والإدغام والإخفاء والإقلاب */
+.tajweed-ghunnah {
+  color: #d97706; /* عنبري - غنة النون والميم المشددتين */
+  font-weight: 600;
+}
+.dark .tajweed-ghunnah {
+  color: #fbbf24;
+}
+
+.tajweed-idgham-ghunnah,
+.tajweed-idgham-shafawi {
+  color: #15803d; /* أخضر غامق - إدغام بغنة */
+  font-weight: 500;
+}
+.dark .tajweed-idgham-ghunnah,
+.dark .tajweed-idgham-shafawi {
+  color: #4ade80;
+}
+
+.tajweed-idgham-no-ghunnah,
+.tajweed-idgham-mutajanisayn,
+.tajweed-idgham-mutaqaribayn {
+  color: #64748b; /* رمادي مزرق */
+}
+.dark .tajweed-idgham-no-ghunnah,
+.dark .tajweed-idgham-mutajanisayn,
+.dark .tajweed-idgham-mutaqaribayn {
+  color: #94a3b8;
+}
+
+.tajweed-ikhfa,
+.tajweed-ikhfa-shafawi {
+  color: #16a34a; /* أخضر نضر - إخفاء بغنة */
+  font-weight: 500;
+}
+.dark .tajweed-ikhfa,
+.dark .tajweed-ikhfa-shafawi {
+  color: #22c55e;
+}
+
+.tajweed-iqlab {
+  color: #7c3aed; /* بنفسجي - إقلاب النون ميماً */
+  font-weight: 600;
+}
+.dark .tajweed-iqlab {
+  color: #c084fc;
+}
+
+/* تحسين شريط التمرير */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.6);
+}

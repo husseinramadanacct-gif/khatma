@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#042f2e" />
+      <stop offset="100%" stop-color="#02201e" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <linearGradient id="bookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer Islamic Decorative Ring -->
+  <circle cx="256" cy="256" r="216" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-opacity="0.5" stroke-dasharray="8 8" />
+  <circle cx="256" cy="256" r="202" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-opacity="0.7" />
+
+  <!-- Star / Geometric Crest at Top -->
+  <path d="M256,76 L262,94 L280,94 L266,105 L271,122 L256,111 L241,122 L246,105 L232,94 L250,94 Z" fill="url(#goldGrad)" />
+
+  <!-- Open Quran Book Main Shape -->
+  <g filter="url(#shadow)">
+    <!-- Book Spine & Base Shadow -->
+    <path d="M256,360 L140,320 C120,314 110,296 110,270 L110,180 C110,165 122,156 136,160 L248,198 C253,200 259,200 264,198 L376,160 C390,156 402,165 402,180 L402,270 C402,296 392,314 372,320 Z" fill="#032220" opacity="0.6"/>
+
+    <!-- Left Page Base -->
+    <path d="M256,346 C210,332 155,322 120,328 L120,188 C160,182 215,194 256,208 Z" fill="url(#bookGrad)" />
+    <!-- Left Page Texture / Lines -->
+    <path d="M144,220 C175,216 215,223 240,232" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M144,242 C175,238 215,245 240,254" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M144,264 C175,260 215,267 240,276" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M144,286 C175,282 215,289 240,298" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Right Page Base -->
+    <path d="M256,346 C302,332 357,322 392,328 L392,188 C352,182 297,194 256,208 Z" fill="#f8fafc" />
+    <!-- Right Page Lines -->
+    <path d="M272,232 C297,223 337,216 368,220" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M272,254 C297,245 337,238 368,242" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M272,276 C297,267 337,260 368,264" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M272,298 C297,289 337,282 368,286" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Center Spine & Golden Bookmark Ribbon -->
+    <path d="M252,204 L260,204 L260,375 L256,385 L252,375 Z" fill="url(#goldGrad)" />
+    <!-- Ribbon tail -->
+    <path d="M250,370 L256,380 L262,370 L262,410 L256,400 L250,410 Z" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Islamic Motif Centerpiece -->
+  <circle cx="256" cy="162" r="14" fill="url(#goldGrad)" opacity="0.9"/>
+  <circle cx="256" cy="162" r="8" fill="#042f2e" />
+
+  <!-- Arabic Typography: خاتمة -->
+  <text x="256" y="445" font-family="'Amiri', 'Cairo', serif" font-size="46" font-weight="bold" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="2">خَاتِمَة</text>
+</svg>
